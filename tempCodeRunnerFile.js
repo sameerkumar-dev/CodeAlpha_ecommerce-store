@@ -17,7 +17,7 @@ mongoose.connect('mongodb://ecommerce_p1:ecommerce_p1@localhost:27017/', {
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(session({ secret: 'secretkey', resave: false, saveUninitialized: true }));
-app.use(express.static('public'));
+app.use(express.static('docs'));
 
 // Models
 const User = mongoose.model('User', new mongoose.Schema({

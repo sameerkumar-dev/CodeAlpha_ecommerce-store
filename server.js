@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost:27017/ecommerce_p1')
 
 // Middleware
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static('docs'));
 app.use(session({
   secret: 'lumina-secret-2026',
   resave: false,
