@@ -46,13 +46,13 @@ user authentication, and database integration in a real-world application setup.
 ![Home Page](screenshots/home.png)
 
 ### Product Details
-![Product Page](screenshots/product.png)
+![Product Page](screenshotsproduct.png)
 
 ### Shopping Cart / Checkout
 ![Cart Page](screenshots/cart.png)
 
 ### Login / Register
-![Login Page](screenshots/login.png)
+![Login Page](screenshotslogin.png)
 
 ---
 

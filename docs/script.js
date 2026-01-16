@@ -63,7 +63,7 @@ let allProducts = [];
 
 async function loadProducts(isFeatured = false) {
     try {
-        const res = await fetch('/products');
+        const res = await fetch('products');
         if (res.ok) {
             allProducts = await res.json();
         } else {
@@ -143,7 +143,7 @@ async function addToCart(productId) {
     const loggedIn = await checkLogin();
     if (!loggedIn) {
         alert('Please login to add items to cart');
-        window.location.href = '/login.html';
+        window.location.href = 'login.html';
         return;
     }
 
@@ -263,7 +263,7 @@ async function renderCart() {
                 cartItem.className = 'cart-item';
                 cartItem.innerHTML = `
                     <div class="cart-item-info">
-                        <img src="${product.image || '/image/placeholder.jpg'}" alt="${product.name || 'Product'}" loading="lazy">
+                        <img src="${product.image || 'image/placeholder.jpg'}" alt="${product.name || 'Product'}" loading="lazy">
                         <div>
                             <h3>${product.name || 'Unknown Product'}</h3>
                             <p>$${product.price.toFixed(2)}</p>
@@ -297,7 +297,7 @@ async function renderCheckout() {
         if (!res.ok) {
             if (res.status === 401) {
                 alert('Please login');
-                window.location.href = '/login.html';
+                window.location.href = 'login.html';
                 return;
             }
             throw new Error('Failed to load cart');
@@ -333,7 +333,7 @@ async function renderCheckout() {
             const checkoutItem = document.createElement('div');
             checkoutItem.className = 'checkout-item';
             checkoutItem.innerHTML = `
-                <img src="${product.image || '/image/placeholder.jpg'}" alt="${product.name || 'Product'}">
+                <img src="${product.image || 'image/placeholder.jpg'}" alt="${product.name || 'Product'}">
                 <div>
                     <h4>${product.name || 'Unknown Product'}</h4>
                     <p>Quantity: ${item.quantity}</p>
@@ -450,7 +450,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         e.preventDefault();
         if (!(await checkLogin())) {
             alert('Please login to view cart');
-            window.location.href = '/login.html';
+            window.location.href = 'login.html';
             return;
         }
         await renderCart();
@@ -491,7 +491,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (!(await checkLogin())) {
             alert('Please login first');
-            window.location.href = '/login.html';
+            window.location.href = 'login.html';
             return;
         }
 
@@ -548,7 +548,7 @@ document.getElementById('login-form')?.addEventListener('submit', async (e) => {
     }
 
     try {
-        const res = await fetch('/login', {
+        const res = await fetch('login', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password }),
@@ -584,7 +584,7 @@ document.getElementById('register-form')?.addEventListener('submit', async (e) =
     }
 
     try {
-        const res = await fetch('/register', {
+        const res = await fetch('register', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ firstName, lastName, email, password }),
@@ -595,7 +595,7 @@ document.getElementById('register-form')?.addEventListener('submit', async (e) =
 
         if (res.ok) {
             alert('Registration successful! Please login to continue.');
-            window.location.href = '/login.html';
+            window.location.href = 'login.html';
         } else {
             alert(data.error || 'Registration failed');
         }

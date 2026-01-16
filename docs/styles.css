@@ -201,7 +201,7 @@ body.register-page .cart-icon-wrapper {
 .hero {
   height: 100vh;
   width: 100%;
-  background-image: url("/image/heroes.jpg");
+  background-image: url("image/heroes.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

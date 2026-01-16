@@ -68,12 +68,12 @@ app.get('/seed', async (req, res) => {
   try {
     await Product.deleteMany({});
     await Product.insertMany([
-      { name: 'Eleva Pendant Light', price: 129.00, category: 'Lighting', image: '/image/product1.jpg' },
-      { name: 'Aeon Lounge Chair', price: 890.00, category: 'Furniture', image: '/image/product2.png' },
-      { name: 'Ceramic Void Vase', price: 45.00, category: 'Decor', image: '/image/product3.jpg' },
-      { name: 'Nordic Wool Throw', price: 84.00, category: 'Textiles', image: '/image/product4.jpg' },
-      { name: 'Geometric Table Lamp', price: 115.00, category: 'Lighting', image: '/image/product5.jpg' },
-      { name: 'Minimalist Desk Organizer', price: 75.00, category: 'Office', image: '/image/product6.jpg' }
+      { name: 'Eleva Pendant Light', price: 129.00, category: 'Lighting', image: 'imageproduct1.jpg' },
+      { name: 'Aeon Lounge Chair', price: 890.00, category: 'Furniture', image: 'imageproduct2.png' },
+      { name: 'Ceramic Void Vase', price: 45.00, category: 'Decor', image: 'imageproduct3.jpg' },
+      { name: 'Nordic Wool Throw', price: 84.00, category: 'Textiles', image: 'imageproduct4.jpg' },
+      { name: 'Geometric Table Lamp', price: 115.00, category: 'Lighting', image: 'imageproduct5.jpg' },
+      { name: 'Minimalist Desk Organizer', price: 75.00, category: 'Office', image: 'imageproduct6.jpg' }
     ]);
     res.send('Products seeded successfully! Visit http://localhost:3000');
   } catch (err) {
@@ -83,7 +83,7 @@ app.get('/seed', async (req, res) => {
 });
 
 // Get all products
-app.get('/products', async (req, res) => {
+app.get('products', async (req, res) => {
   try {
     const products = await Product.find();
     res.json(products);
@@ -93,7 +93,7 @@ app.get('/products', async (req, res) => {
 });
 
 // Register
-app.post('/register', async (req, res) => {
+app.post('register', async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
 
   if (!firstName || !lastName || !email || !password) {
@@ -128,7 +128,7 @@ app.post('/register', async (req, res) => {
 });
 
 // Login
-app.post('/login', async (req, res) => {
+app.post('login', async (req, res) => {
   const { email, password } = req.body;
 
   if (!email || !password) {
