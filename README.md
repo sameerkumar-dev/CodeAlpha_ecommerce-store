@@ -73,9 +73,9 @@ user authentication, and database integration in a real-world application setup.
 4. Open in browser
 
     http://localhost:3000
-
+---
     
-#📚 Learning Highlights
+#📚 **Learning Highlights**
 
  - Full stack application flow
  - Backend API development
@@ -83,8 +83,8 @@ user authentication, and database integration in a real-world application setup.
  - Authentication basics
  - Practical project structuring
 
-
-#👤 Author
+---
+#👤 **Author**
 
 Sameer Kumar
 BCA Student | Full-Stack Learner
