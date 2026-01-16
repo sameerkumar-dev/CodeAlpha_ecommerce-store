@@ -52,7 +52,7 @@ user authentication, and database integration in a real-world application setup.
 ![Cart Page](screenshots/cart.png)
 
 ### Login / Register
-![Login Page](screenshotslogin.png)
+![Login Page](screenshots/login.png)
 
 ---
 
@@ -82,6 +82,10 @@ user authentication, and database integration in a real-world application setup.
  - MongoDB data handling
  - Authentication basics
  - Practical project structuring
+
+---
+## 🚀 Live Demo
+🔗 https://sameerkumar-dev.github.io/CodeAlpha_ecommerce-store/
 
 ---
 #👤 **Author**
