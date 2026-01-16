@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eleva - Register</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="register-page">
+
+  <!-- Header - NO CART ICON on register page -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="/"><h2>Eleva</h2></a>
+      </div>
+      <nav class="nav" id="nav-menu">
+        <a href="/">Home</a>
+        <a href="/Product.html">Product</a>
+
+        <!-- Guest Links -->
+        <div id="guest-links">
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Register</a>
+        </div>
+
+        <!-- Logged In User -->
+        <div id="user-links" style="display: none;">
+          <span id="welcome-msg">Welcome, <span id="user-name">User</span></span>
+          <a href="#" id="logout-link">Logout</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Register Section -->
+  <main class="login-page">
+    <div class="login-container">
+      <div class="tabs">
+        <div class="tab inactive" onclick="window.location.href='/login.html'">Login</div>
+        <div class="tab active">Register</div>
+      </div>
+
+      <h2>Create your account</h2>
+      <p>Enter your details to get started</p>
+
+      <form id="register-form">
+        <div class="form-group name-group">
+          <div>
+            <label for="firstName">First name</label>
+            <input type="text" id="firstName" name="firstName" placeholder="John" required>
+          </div>
+          <div>
+            <label for="lastName">Last name</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Doe" required>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+
+        <button type="submit" class="signin-btn">Create Account</button>
+      </form>
+
+      <div class="terms">
+        By clicking continue, you agree to our <a href="#">Terms of Service</a><br>
+        and <a href="#">Privacy Policy</a>.
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h4>Eleva</h4>
+        <p>Curated lifestyle essentials for the modern home. Quality, simplicity, and timeless design.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#">Lighting</a></li>
+          <li><a href="#">Furniture</a></li>
+          <li><a href="#">Decor</a></li>
+          <li><a href="#">Textiles</a></li>
+          <li><a href="#">Office</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter-footer">
+        <h5>Newsletter</h5>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Eleva. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Sirf yeh ek line rakho -->
+  <script src="script.js"></script>
+
+</body>
+</html>

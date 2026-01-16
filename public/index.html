@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eleva - Design for Better Living</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/"><h2>Eleva</h2></a>
+            </div>
+            <nav class="nav" id="nav-menu">
+                <a href="/">Home</a>
+                <a href="/Product.html">Product</a>
+
+                <div class="cart-icon-wrapper">
+                    <a href="#" id="cart-toggle" aria-label="Open Cart">
+                        🛒
+                        <span class="cart-badge" id="cart-count" style="display:none;">0</span>
+                    </a>
+                </div>
+
+                <div id="guest-links">
+                    <a href="/login.html">Login</a>
+                    <a href="/register.html">Register</a>
+                </div>
+
+                <div id="user-links" style="display: none;">
+                    <span id="welcome-msg">Welcome, <span id="user-name">User</span></span>
+                    <a href="#" id="logout-link">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-content">
+    <h3>NEW COLLECTION 2026</h3>
+    <h1>Design for<br>Better Living</h1>
+    <p>
+      Discover our curated selection of minimalist furniture and home accessories.
+      Crafted with purpose, designed for longevity.
+    </p>
+    <a href="/Product.html" class="btn-primary">Explore Collection →</a>
+  </div>
+</section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+        <div class="container categories-grid">
+            <div class="category-item">
+                <img src="/image/category1.jpg" alt="Lighting">
+                <p>Lighting</p>
+            </div>
+            <div class="category-item large">
+                <img src="/image/category2.jpg" alt="Furniture">
+                <p>Furniture</p>
+            </div>
+            <div class="category-item">
+                <img src="/image/category3.jpg" alt="Decor">
+                <p>Decor</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Products</h2>
+                <p>Handpicked essentials for your home.</p>
+                <a href="/Product.html" class="view-all">View All →</a>
+            </div>
+
+            <!-- Dynamic + Fallback Grid -->
+            <div class="products-grid" id="featured-products-grid">
+                <!-- Products yahan backend se load honge -->
+                <!-- Agar backend fail ho toh fallback products dikhenge (script.js mein hai) -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container newsletter-container">
+            <h3>Join the Community</h3>
+            <p>Subscribe to receive updates on new arrivals, special offers, and design inspiration.</p>
+            <form class="newsletter-form" id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Cart Panel -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close-btn" id="cart-close">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="subtotal-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="/checkout.html" class="checkout-btn">Checkout →</a>
+        </div>
+    </div>
+
+    <!-- Empty Cart Popup (when clicking checkout with empty cart) -->
+<div class="empty-cart-modal" id="empty-cart-modal">
+    <div class="empty-cart-box">
+        <h3>Cart is Empty</h3>
+        <p>Your cart is empty. Please add items before checkout.</p>
+        <button id="close-empty-popup">OK</button>
+    </div>
+</div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>Eleva</h4>
+                <p>Curated lifestyle essentials for the modern home. Quality, simplicity, and timeless design.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Product</h5>
+                <ul>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Decor</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-footer">
+                <h5>Newsletter</h5>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Eleva. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product All - Eleva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="/"><h2>Eleva</h2></a>
+      </div>
+      <nav class="nav" id="nav-menu">
+        <a href="/">Home</a>
+        <a href="/Product.html">Product</a>
+        
+        <div class="cart-icon-wrapper">
+          <a href="#" id="cart-toggle" aria-label="Open Cart">
+            🛒
+            <span class="cart-badge" id="cart-count" style="display:none;">0</span>
+          </a>
+        </div>
+
+        <div id="guest-links">
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Register</a>
+        </div>
+
+        <div id="user-links" style="display: none;">
+          <span id="welcome-msg">Welcome, <span id="user-name">User</span></span>
+          <a href="#" id="logout-link">Logout</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Title -->
+  <section class="Product-hero">
+    <div class="container">
+      <h1>Product All</h1>
+      <p>Discover our full collection of modern essentials.</p>
+      <div class="Product-search-wrapper">
+        <input type="text" id="Product-search" placeholder="Search products..." class="Product-search">
+      </div>
+    </div>
+  </section>
+
+  <!-- Filters -->
+  <section class="Product-filters">
+    <div class="container">
+      <div class="filter-pills">
+        <button class="filter-pill active" data-category="all">All</button>
+        <button class="filter-pill" data-category="lighting">Lighting</button>
+        <button class="filter-pill" data-category="furniture">Furniture</button>
+        <button class="filter-pill" data-category="decor">Decor</button>
+        <button class="filter-pill" data-category="textiles">Textiles</button>
+        <button class="filter-pill" data-category="office">Office</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="Product-products">
+    <div class="container">
+      <div class="products-grid Product-grid" id="products-grid">
+        <!-- All products yahan backend se load honge -->
+        <!-- Fallback bhi script.js mein hai -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Panel -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Shopping Cart</h2>
+      <button class="cart-close-btn" id="cart-close">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <a href="/checkout.html" class="checkout-btn">Checkout →</a>
+    </div>
+  </div>
+
+  <!-- Empty Cart Popup (when clicking checkout with empty cart) -->
+<div class="empty-cart-modal" id="empty-cart-modal">
+    <div class="empty-cart-box">
+        <h3>Cart is Empty</h3>
+        <p>Your cart is empty. Please add items before checkout.</p>
+        <button id="close-empty-popup">OK</button>
+    </div>
+</div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h4>Eleva</h4>
+        <p>Curated lifestyle essentials for the modern home. Quality, simplicity, and timeless design.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#">Lighting</a></li>
+          <li><a href="#">Furniture</a></li>
+          <li><a href="#">Decor</a></li>
+          <li><a href="#">Textiles</a></li>
+          <li><a href="#">Office</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter-footer">
+        <h5>Newsletter</h5>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Eleva. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

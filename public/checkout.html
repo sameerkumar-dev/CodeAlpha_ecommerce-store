@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Eleva</title>
+  <link rel="stylesheet" href="styles.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-container">
+      <div class="logo">
+        <a href="/">
+          <h2>Eleva</h2>
+        </a>
+      </div>
+      <nav class="nav" id="nav-menu">
+        <a href="/">Home</a>
+        <a href="/Product.html">Product</a>
+
+        <div class="cart-icon-wrapper">
+          <a href="#" id="cart-toggle" aria-label="Open Cart">
+            🛒
+            <span class="cart-badge" id="cart-count" style="display:none;">0</span>
+          </a>
+        </div>
+
+        <!-- Guest Links -->
+        <div id="guest-links">
+          <a href="/login.html">Login</a>
+          <a href="/register.html">Register</a>
+        </div>
+
+        <!-- Logged In User -->
+        <div id="user-links" style="display: none;">
+          <span id="welcome-msg">Welcome, <span id="user-name">User</span></span>
+          <a href="#" id="logout-link">Logout</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Checkout Section -->
+  <section class="checkout-section">
+    <div class="container checkout-container">
+      <h1>Checkout</h1>
+
+      <div class="checkout-grid">
+        <!-- Left: Form -->
+        <div class="checkout-form">
+          <div class="form-section">
+            <h3>Contact Information</h3>
+            <input type="email" id="email" placeholder="Email" required>
+
+            <!-- NEW: Phone Number Field -->
+            <input type="tel" id="phone" placeholder="Phone Number" required style="margin-top: 16px;">
+          </div>
+
+          <div class="form-section">
+            <h3>Shipping Address</h3>
+            <div class="name-row">
+              <input type="text" placeholder="First Name" required>
+              <input type="text" placeholder="Last Name" required>
+            </div>
+            <input type="text" placeholder="Address" required>
+            <div class="city-zip-row">
+              <input type="text" placeholder="City" required>
+              <input type="text" placeholder="ZIP Code" required>
+            </div>
+          </div>
+
+          <div class="form-section">
+            <h3>Payment Details</h3>
+            <div class="card-icons">
+              <img src="https://img.icons8.com/color/48/000000/visa.png" alt="Visa" width="40">
+              <img src="https://img.icons8.com/color/48/000000/mastercard.png" alt="Mastercard" width="40">
+            </div>
+            <p class="secure-note">Encrypted & Secure</p>
+            <input type="text" placeholder="Card Number" maxlength="19" required>
+            <div class="exp-cvc-row">
+              <input type="text" placeholder="MM/YY" required>
+              <input type="text" placeholder="CVC" maxlength="3" required>
+            </div>
+          </div>
+
+          <button type="submit" class="pay-btn" id="pay-btn">Pay $0.00</button>
+        </div>
+
+        <!-- Right: Order Summary -->
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div id="checkout-items"></div>
+
+          <div class="summary-totals">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="checkout-subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span>Free</span>
+            </div>
+            <div class="summary-total">
+              <span>Total</span>
+              <span id="checkout-total">$0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cart Panel -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <div class="cart-panel" id="cart-panel">
+    <div class="cart-header">
+      <h2>Shopping Cart</h2>
+      <button class="cart-close-btn" id="cart-close">×</button>
+    </div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="subtotal-row">
+        <span>Subtotal</span>
+        <span id="cart-subtotal">$0.00</span>
+      </div>
+      <a href="/checkout.html" class="checkout-btn">Checkout →</a>
+    </div>
+  </div>
+
+  <!-- Empty Cart Modal -->
+  <div class="modal" id="empty-cart-modal">
+    <div class="modal-content">
+      <span class="close-modal" id="close-empty-popup">×</span>
+      <h2>Your cart is empty!</h2>
+      <p>Please add some amazing products first :)</p>
+      <button class="btn-primary" onclick="window.location.href='/product.html'">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h4>Eleva</h4>
+        <p>Curated lifestyle essentials for the modern home. Quality, simplicity, and timeless design.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Product</h5>
+        <ul>
+          <li><a href="#">Lighting</a></li>
+          <li><a href="#">Furniture</a></li>
+          <li><a href="#">Decor</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div class="footer-col newsletter-footer">
+        <h5>Newsletter</h5>
+        <form>
+          <input type="email" placeholder="Enter your email">
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Eleva. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

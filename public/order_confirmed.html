@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed - Eleva</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header (Same as index.html) -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/">
+                    <h2>Eleva</h2>
+                </a>
+            </div>
+            <nav class="nav" id="nav-menu">
+                <a href="/">Home</a>
+                <a href="/Product.html">Product</a>
+
+                <div class="cart-icon-wrapper">
+                    <a href="#" id="cart-toggle" aria-label="Open Cart">
+                        🛒
+                        <span class="cart-badge" id="cart-count" style="display:none;">0</span>
+                    </a>
+                </div>
+
+                <!-- Guest Links -->
+                <div id="guest-links">
+                    <a href="/login.html">Login</a>
+                    <a href="/register.html">Register</a>
+                </div>
+
+                <!-- Logged In User -->
+                <div id="user-links" style="display: none;">
+                    <span id="welcome-msg">Welcome, <span id="user-name">User</span></span>
+                    <a href="#" id="logout-link">Logout</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Confirmed Section -->
+    <section class="order-confirmed">
+        <div class="container">
+            <div class="confirmed-content">
+                <div class="check-icon">
+                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="#E8F5E8" />
+                        <path d="M30 50L45 65L70 35" stroke="#22C55E" stroke-width="8" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+                <h1>Order Confirmed!</h1>
+                <p>Thank you for your purchase. Your order <strong>#<span id="order-number">8979</span></strong> has
+                    been received and is being processed.</p>
+                <a href="/" class="return-home-btn">Return Home</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Panel (Same as other pages) -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-panel" id="cart-panel">
+        <div class="cart-header">
+            <h2>Shopping Cart</h2>
+            <button class="cart-close-btn" id="cart-close">×</button>
+        </div>
+        <div class="cart-items" id="cart-items"></div>
+        <div class="cart-footer">
+            <div class="subtotal-row">
+                <span>Subtotal</span>
+                <span id="cart-subtotal">$0.00</span>
+            </div>
+            <a href="/checkout.html" class="checkout-btn">Checkout →</a>
+        </div>
+    </div>
+
+    <!-- Empty Cart Popup Modal -->
+    <div class="empty-cart-modal" id="empty-cart-modal">
+        <div class="empty-cart-box">
+            <h3>Cart is Empty</h3>
+            <p>Your cart is empty. Please add items before checkout.</p>
+            <button id="close-empty-popup">OK</button>
+        </div>
+    </div>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h4>Eleva</h4>
+                <p>Curated lifestyle essentials for the modern home. Quality, simplicity, and timeless design.</p>
+            </div>
+            <div class="footer-col">
+                <h5>Product</h5>
+                <ul>
+                    <li><a href="#">Lighting</a></li>
+                    <li><a href="#">Furniture</a></li>
+                    <li><a href="#">Decor</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Company</h5>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Terms</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-footer">
+                <h5>Newsletter</h5>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Eleva. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('lastOrderNumber');
+            if (saved && document.getElementById('order-number')) {
+                document.getElementById('order-number').textContent = saved;
+            }
+        });
+    </script>
+
+</body>
+
+</html>
